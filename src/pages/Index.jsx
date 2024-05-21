@@ -25,24 +25,42 @@ const Index = () => {
 
         <Box width="100%">
           <Text fontSize="lg">Select Backdrop Color:</Text>
-          <Select placeholder="Select backdrop color" value={backdrop} onChange={handleBackdropChange}>
-            <option value="white">White</option>
-            <option value="black">Black</option>
-            <option value="blue">Blue</option>
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-          </Select>
+          <HStack spacing={4}>
+            <Select placeholder="Select backdrop color" value={backdrop} onChange={handleBackdropChange}>
+              <option value="white">White</option>
+              <option value="black">Black</option>
+              <option value="blue">Blue</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+            </Select>
+            <Image src={`/images/backdrops/${backdrop}.jpg`} alt={`${backdrop} backdrop`} boxSize="50px" />
+          </HStack>
         </Box>
 
         <Box width="100%">
           <Text fontSize="lg">Select Balloons:</Text>
           <CheckboxGroup value={balloons} onChange={handleBalloonsChange}>
             <VStack alignItems="flex-start">
-              <Checkbox value="red">Red</Checkbox>
-              <Checkbox value="blue">Blue</Checkbox>
-              <Checkbox value="green">Green</Checkbox>
-              <Checkbox value="yellow">Yellow</Checkbox>
-              <Checkbox value="pink">Pink</Checkbox>
+              <HStack>
+                <Checkbox value="red">Red</Checkbox>
+                <Image src="/images/balloons/red.jpg" alt="Red balloon" boxSize="30px" />
+              </HStack>
+              <HStack>
+                <Checkbox value="blue">Blue</Checkbox>
+                <Image src="/images/balloons/blue.jpg" alt="Blue balloon" boxSize="30px" />
+              </HStack>
+              <HStack>
+                <Checkbox value="green">Green</Checkbox>
+                <Image src="/images/balloons/green.jpg" alt="Green balloon" boxSize="30px" />
+              </HStack>
+              <HStack>
+                <Checkbox value="yellow">Yellow</Checkbox>
+                <Image src="/images/balloons/yellow.jpg" alt="Yellow balloon" boxSize="30px" />
+              </HStack>
+              <HStack>
+                <Checkbox value="pink">Pink</Checkbox>
+                <Image src="/images/balloons/pink.jpg" alt="Pink balloon" boxSize="30px" />
+              </HStack>
             </VStack>
           </CheckboxGroup>
         </Box>
@@ -52,9 +70,12 @@ const Index = () => {
           <CheckboxGroup value={numberBalloons} onChange={handleNumberBalloonsChange}>
             <HStack spacing={4}>
               {Array.from({ length: 10 }, (_, i) => (
-                <Checkbox key={i} value={String(i)}>
-                  {i}
-                </Checkbox>
+                <VStack>
+                  <Checkbox key={i} value={String(i)}>
+                    {i}
+                  </Checkbox>
+                  <Image src={`/images/numbers/${i}.jpg`} alt={`Number ${i} balloon`} boxSize="30px" />
+                </VStack>
               ))}
             </HStack>
           </CheckboxGroup>
