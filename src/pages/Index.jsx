@@ -33,7 +33,7 @@ const Index = () => {
               <option value="red">Red</option>
               <option value="green">Green</option>
             </Select>
-            <Image src={`/images/backdrops/${backdrop}.jpg`} alt={`${backdrop} backdrop`} boxSize="50px" />
+            <Image src={`/images/backdrops/${backdrop}_cartoon.jpg`} alt={`${backdrop} backdrop`} boxSize="50px" />
           </HStack>
         </Box>
 
@@ -43,23 +43,23 @@ const Index = () => {
             <VStack alignItems="flex-start">
               <HStack>
                 <Checkbox value="red">Red</Checkbox>
-                <Image src="/images/balloons/red.jpg" alt="Red balloon" boxSize="30px" />
+                <Image src="/images/balloons/red_cartoon.jpg" alt="Red balloon" boxSize="30px" />
               </HStack>
               <HStack>
                 <Checkbox value="blue">Blue</Checkbox>
-                <Image src="/images/balloons/blue.jpg" alt="Blue balloon" boxSize="30px" />
+                <Image src="/images/balloons/blue_cartoon.jpg" alt="Blue balloon" boxSize="30px" />
               </HStack>
               <HStack>
                 <Checkbox value="green">Green</Checkbox>
-                <Image src="/images/balloons/green.jpg" alt="Green balloon" boxSize="30px" />
+                <Image src="/images/balloons/green_cartoon.jpg" alt="Green balloon" boxSize="30px" />
               </HStack>
               <HStack>
                 <Checkbox value="yellow">Yellow</Checkbox>
-                <Image src="/images/balloons/yellow.jpg" alt="Yellow balloon" boxSize="30px" />
+                <Image src="/images/balloons/yellow_cartoon.jpg" alt="Yellow balloon" boxSize="30px" />
               </HStack>
               <HStack>
                 <Checkbox value="pink">Pink</Checkbox>
-                <Image src="/images/balloons/pink.jpg" alt="Pink balloon" boxSize="30px" />
+                <Image src="/images/balloons/pink_cartoon.jpg" alt="Pink balloon" boxSize="30px" />
               </HStack>
             </VStack>
           </CheckboxGroup>
@@ -74,7 +74,7 @@ const Index = () => {
                   <Checkbox key={i} value={String(i)}>
                     {i}
                   </Checkbox>
-                  <Image src={`/images/numbers/${i}.jpg`} alt={`Number ${i} balloon`} boxSize="30px" />
+                  <Image src={`/images/numbers/${i}_cartoon.jpg`} alt={`Number ${i} balloon`} boxSize="30px" />
                 </VStack>
               ))}
             </HStack>
