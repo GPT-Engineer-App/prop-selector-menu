@@ -15,6 +15,9 @@ function Navigation() {
           <Link as={RouterLink} to="/intro" color="white" mx={2}>
             Intro
           </Link>
+          <Link as={RouterLink} to="/instructions" color="white" mx={2}>
+            Instructions
+          </Link>
         </Flex>
       </Flex>
     </Box>
